@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hasan | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-zinc-950 text-white font-sans">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 w-full bg-zinc-950/80 backdrop-blur-lg z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-emerald-400">Portfolio.</h1>
+      <div class="hidden md:flex gap-8">
+        <a href="#home" class="hover:text-emerald-400 transition">Home</a>
+        <a href="#about" class="hover:text-emerald-400 transition">About</a>
+        <a href="#skills" class="hover:text-emerald-400 transition">Skills</a>
+        <a href="#projects" class="hover:text-emerald-400 transition">Projects</a>
+        <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden text-2xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="min-h-screen flex items-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,#10b981_0%,transparent_70%)] opacity-10"></div>
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-6xl md:text-7xl font-bold mb-4">
+          <span class="text-emerald-400">Rizki Hasan Fauzi</span>
+      </h2>
+      <div class="text-3xl md:text-4xl text-zinc-400 mb-8" id="typing"></div>
+      <p class="max-w-xl mx-auto text-zinc-400 mb-10">Mahasiswa Teknik Informatika | Full-Stack Developer | UI/UX Enthusiast</p>
+      <div class="social-icons">
+    <a href="https://facebook.com/Khi Iki"target="_blank"rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://instagram.com/_rizkihsn_"target="_blank"rel="noopener noreferrer"></a><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://linkedin.com/Rizki Hasan Fauzi"target="_blank"rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+</div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-24 bg-zinc-900">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <!-- Di section About -->
+<img 
+  src="{{ url_for('static', filename='img/profile.jpg') }}" 
+  alt="Hasan - Foto Profil" 
+  class="rounded-full w-64 h-64 md:w-80 md:h-80 mx-auto shadow-2xl object-cover border-4 border-emerald-500"
+/>
+      <div>
+        <h2 class="text-5xl font-bold mb-6">About Me</h2>
+        <p class="text-zinc-400 text-lg leading-relaxed">
+          I'm an Information Technology student with a keen interest in software development and web technologies. I've learned technologies like Python, Flask, HTML, CSS, and JavaScript to create functional and visually appealing web applications. I've also studied systems design, from database and backend development to creating user-friendly user interfaces.
+I'm currently continuing to develop my skills by creating several projects, including a Flask-based inventory app, a portfolio website, and other web projects as learning tools. I'm also focusing on AI and machine learning to expand my knowledge in technology.        <div class="mt-8 grid grid-cols-2 gap-6">
+          <div><span class="block text-emerald-400 text-2xl font-bold">2+</span><span class="text-zinc-500">coding year</span></div>
+          <div><span class="block text-emerald-400 text-2xl font-bold">4+</span><span class="text-zinc-500">Project Completed</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-16">Skills &amp; Tools</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <!-- python -->
+        <div class="bg-zinc-900 p-8 rounded-3xl text-center hover:scale-105 transition">
+          <i class="fa-brands fa-python text-5xl text-emerald-400 mb-4"></i>
+          <p class="font-semibold">Python / Flask</p>
+        </div>
+        <!-- C++  -->
+      <div class="skill-item bg-zinc-900 p-8 rounded-3xl text-center hover:scale-105 transition glass">
+        <img src="https://p7.hiclipart.com/preview/840/950/555/c-programming-language-computer-programming-array-data-structure-c-green-icon.jpg" 
+             alt="C++" class="w-20 h-20 mx-auto mb-4" />
+        <p class="font-semibold text-lg">C++</p>
+      </div>
+
+      <!-- Java -->
+      <div class="skill-item bg-zinc-900 p-8 rounded-3xl text-center hover:scale-105 transition glass">
+        <img src="https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png" 
+             alt="Java" class="w-20 h-20 mx-auto mb-4 object-contain" />
+        <p class="font-semibold text-lg">Java</p>
+      </div>
+
+      <!-- C# -->
+      <div class="skill-item bg-zinc-900 p-8 rounded-3xl text-center hover:scale-105 transition glass">
+        <img src="https://miro.medium.com/1*ijVIkDXMgKERwfor60WuuQ.jpeg" 
+             alt="C#" class="w-20 h-20 mx-auto mb-4 object-contain" />
+        <p class="font-semibold text-lg">C#</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-24 bg-zinc-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex justify-between items-center mb-12">
+        <h2 class="text-5xl font-bold">Projects</h2>
+        <div class="flex gap-4">
+          <button onclick="filterProjects('all')" class="active-filter px-6 py-2 rounded-full bg-emerald-500">All</button>
+          <button onclick="filterProjects('web')" class="px-6 py-2 rounded-full hover:bg-zinc-800">Web</button>
+          <button onclick="filterProjects('mobile')" class="px-6 py-2 rounded-full hover:bg-zinc-800">Mobile</button>
+        </div>
+      </div>
+
+      <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {% for project in projects %}
+        <div class="project-card bg-zinc-800 rounded-3xl overflow-hidden group cursor-pointer" data-category="{{ project.category }}">
+          <img src="{{ url_for('static', filename='img/' + project.img) }}" class="w-full h-56 object-cover group-hover:scale-110 transition">
+          <div class="p-8">
+            <h3 class="font-bold text-2xl">{{ project.title }}</h3>
+            <p class="text-zinc-400 mt-3 line-clamp-3">{{ project.desc }}</p>
+            <div class="flex gap-2 mt-6">
+              {% for t in project.tech %}
+              <span class="text-xs bg-zinc-700 px-4 py-1 rounded-full">{{ t }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-5xl font-bold mb-12">Let's work together!</h2>
+      <form id="contact-form" class="max-w-lg mx-auto space-y-6">
+        <input type="text" id="name" placeholder="Name" class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-4" required>
+        <input type="email" id="email" placeholder="E-mail" class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-4" required>
+        <textarea id="message" rows="6" placeholder="message..." class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-4" required></textarea>
+        <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 py-4 rounded-2xl font-medium text-lg transition">send message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-black py-10 text-center text-zinc-500">
+    © 2026 Hasan • Made with ❤️ &amp; Flask
+  </footer>
+  </div>  
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
